@@ -5,22 +5,22 @@ locals {
       vpc_cidr = var.vpc_cidr_insp
       igw      = "true"
       subnets = {
-        "insp-secmgmt1"   = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.0.0/24", az = var.az1 }
-        "insp-secmgmt2"   = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.1.0/24", az = var.az2 }
-        "insp-tgweni1"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.2.0/24", az = var.az1 }
-        "insp-tgweni2"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.3.0/24", az = var.az2 }
-        "insp-gwlbe1"     = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.4.0/24", az = var.az1 }
-        "insp-gwlbe2"     = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.5.0/24", az = var.az2 }
-        "insp-gwlb1"      = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.6.0/24", az = var.az1 }
-        "insp-gwlb2"      = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.7.0/24", az = var.az2 }
-        "insp-fwinside1"  = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.8.0/24", az = var.az1 }
-        "insp-fwinside2"  = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.9.0/24", az = var.az2 }
-        "insp-fwoutside1" = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.10.0/24", az = var.az1 }
-        "insp-fwoutside2" = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.11.0/24", az = var.az2 }
-        "insp-waflb1"     = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.12.0/24", az = var.az1 }
-        "insp-waflb2"     = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.13.0/24", az = var.az2 }
-        "insp-public1"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.14.0/24", az = var.az1 }
-        "insp-public2"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.15.0/24", az = var.az2 }
+        "insp-secmgmt1"   = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.1.0/24", az = var.az1 }
+        "insp-secmgmt2"   = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.2.0/24", az = var.az2 }
+        "insp-tgweni1"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.3.0/24", az = var.az1 }
+        "insp-tgweni2"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.4.0/24", az = var.az2 }
+        "insp-gwlbe1"     = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.5.0/24", az = var.az1 }
+        "insp-gwlbe2"     = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.6.0/24", az = var.az2 }
+        "insp-gwlb1"      = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.7.0/24", az = var.az1 }
+        "insp-gwlb2"      = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.8.0/24", az = var.az2 }
+        "insp-fwinside1"  = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.9.0/24", az = var.az1 }
+        "insp-fwinside2"  = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.10.0/24", az = var.az2 }
+        "insp-fwoutside1" = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.11.0/24", az = var.az1 }
+        "insp-fwoutside2" = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.12.0/24", az = var.az2 }
+        "insp-waflb1"     = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.13.0/24", az = var.az1 }
+        "insp-waflb2"     = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.14.0/24", az = var.az2 }
+        "insp-public1"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.15.0/24", az = var.az1 }
+        "insp-public2"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_insp, 16, 0)), 0, 2))}.16.0/24", az = var.az2 }
       }
     }
     "trns" = {
