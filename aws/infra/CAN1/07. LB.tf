@@ -8,7 +8,7 @@ locals {
     }
     "Test-prod" = {
       vpc             = "prod"
-      target          = ["10.112.7.173", "", "", ]
+      target          = ["10.112.7.174", "", "", ]
       port            = ["80"]
       inbound_allowed = ["0.0.0.0/0", ]
     }
@@ -17,7 +17,7 @@ locals {
   nlb_ext = {
     "Test-prod-ext" = {
       vpc             = "prod"
-      target          = ["10.112.7.173", "", "", ]
+      target          = ["10.112.7.174", "", "", ]
       port            = ["80"]
       inbound_allowed = ["0.0.0.0/0", ]
       internal        = "false"
