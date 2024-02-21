@@ -102,39 +102,51 @@ locals {
     }
     trns-subnet1 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["trans1"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     trns-subnet2 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["trans2"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     trns-subnet3 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["trans1"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     trns-subnet4 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["trans2"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     trns-subnet5 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["trans1"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     trns-subnet6 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["trans2"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     trns-subnet7 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["trans1"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     trns-subnet8 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["trans2"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     trns-dmz1 = { #10.101.101.0/24
       "0.0.0.0/0" = aws_internet_gateway.igw["trns"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     trns-dmz2 = { #10.101.102.0/24
       "0.0.0.0/0" = aws_internet_gateway.igw["trns"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     trns-protected1 = { #10.101.103.0/24
       "0.0.0.0/0" = aws_internet_gateway.igw["trns"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     trns-protected2 = { #10.101.104.0/24
       "0.0.0.0/0" = aws_internet_gateway.igw["trns"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
   }
 }
@@ -161,39 +173,51 @@ locals {
     }
     prod-subnet1 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["prod1"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     prod-subnet2 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["prod2"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     prod-subnet3 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["prod1"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     prod-subnet4 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["prod2"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     prod-subnet5 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["prod1"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     prod-subnet6 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["prod2"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     prod-subnet7 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["prod1"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     prod-subnet8 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["prod2"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     prod-dmz1 = { #10.101.101.0/24
       "0.0.0.0/0" = aws_internet_gateway.igw["prod"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     prod-dmz2 = { #10.101.102.0/24
       "0.0.0.0/0" = aws_internet_gateway.igw["prod"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     prod-protected1 = { #10.101.103.0/24
       "0.0.0.0/0" = aws_internet_gateway.igw["prod"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     prod-protected2 = { #10.101.104.0/24
       "0.0.0.0/0" = aws_internet_gateway.igw["prod"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
   }
 }
@@ -220,39 +244,51 @@ locals {
     }
     cde-subnet1 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["cde1"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     cde-subnet2 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["cde2"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     cde-subnet3 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["cde1"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     cde-subnet4 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["cde2"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     cde-subnet5 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["cde1"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     cde-subnet6 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["cde2"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     cde-subnet7 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["cde1"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     cde-subnet8 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["cde2"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     cde-dmz1 = { #10.101.101.0/24
       "0.0.0.0/0" = aws_internet_gateway.igw["cde"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     cde-dmz2 = { #10.101.102.0/24
       "0.0.0.0/0" = aws_internet_gateway.igw["cde"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     cde-protected1 = { #10.101.103.0/24
       "0.0.0.0/0" = aws_internet_gateway.igw["cde"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
     cde-protected2 = { #10.101.104.0/24
       "0.0.0.0/0" = aws_internet_gateway.igw["cde"].id
+      "10.0.0.0/8"     = aws_ec2_transit_gateway.tgw.id
     }
   }
 }
