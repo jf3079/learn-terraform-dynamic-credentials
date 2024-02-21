@@ -101,28 +101,28 @@ locals {
 
     }
     trns-subnet1 = {
-      #  "0.0.0.0/0" = aws_nat_gateway.ngw["Trans1"].id
+        "0.0.0.0/0" = aws_nat_gateway.ngw["Trans1"].id
     }
     trns-subnet2 = {
-      #  "0.0.0.0/0" = aws_nat_gateway.ngw["Trans1"].id
+        "0.0.0.0/0" = aws_nat_gateway.ngw["Trans2"].id
     }
     trns-subnet3 = {
-      # "0.0.0.0/0" = aws_nat_gateway.ngw["Trans1"].id
+       "0.0.0.0/0" = aws_nat_gateway.ngw["Trans1"].id
     }
     trns-subnet4 = {
-      #  "0.0.0.0/0" = aws_nat_gateway.ngw["Trans1"].id
+        "0.0.0.0/0" = aws_nat_gateway.ngw["Trans2"].id
     }
     trns-subnet5 = {
-      #  "0.0.0.0/0" = aws_nat_gateway.ngw["Trans1"].id
+        "0.0.0.0/0" = aws_nat_gateway.ngw["Trans1"].id
     }
     trns-subnet6 = {
-      #  "0.0.0.0/0" = aws_nat_gateway.ngw["Trans1"].id
+        "0.0.0.0/0" = aws_nat_gateway.ngw["Trans2"].id
     }
     trns-subnet7 = {
-      #  "0.0.0.0/0" = aws_nat_gateway.ngw["Trans1"].id
+        "0.0.0.0/0" = aws_nat_gateway.ngw["Trans1"].id
     }
     trns-subnet8 = {
-      # "0.0.0.0/0" = aws_nat_gateway.ngw["Trans1"].id
+       "0.0.0.0/0" = aws_nat_gateway.ngw["Trans2"].id
     }
     trns-dmz1 = { #10.101.101.0/24
       "0.0.0.0/0" = aws_internet_gateway.igw["trns"].id
@@ -163,25 +163,25 @@ locals {
       "0.0.0.0/0" = aws_nat_gateway.ngw["prod1"].id
     }
     prod-subnet2 = {
-      "0.0.0.0/0" = aws_nat_gateway.ngw["prod1"].id
+      "0.0.0.0/0" = aws_nat_gateway.ngw["prod2"].id
     }
     prod-subnet3 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["prod1"].id
     }
     prod-subnet4 = {
-      "0.0.0.0/0" = aws_nat_gateway.ngw["prod1"].id
+      "0.0.0.0/0" = aws_nat_gateway.ngw["prod2"].id
     }
     prod-subnet5 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["prod1"].id
     }
     prod-subnet6 = {
-      "0.0.0.0/0" = aws_nat_gateway.ngw["prod1"].id
+      "0.0.0.0/0" = aws_nat_gateway.ngw["prod2"].id
     }
     prod-subnet7 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["prod1"].id
     }
     prod-subnet8 = {
-      "0.0.0.0/0" = aws_nat_gateway.ngw["prod1"].id
+      "0.0.0.0/0" = aws_nat_gateway.ngw["prod2"].id
     }
     prod-dmz1 = { #10.101.101.0/24
       "0.0.0.0/0" = aws_internet_gateway.igw["prod"].id
@@ -222,25 +222,25 @@ locals {
       "0.0.0.0/0" = aws_nat_gateway.ngw["cde1"].id
     }
     cde-subnet2 = {
-      "0.0.0.0/0" = aws_nat_gateway.ngw["cde1"].id
+      "0.0.0.0/0" = aws_nat_gateway.ngw["cde2"].id
     }
     cde-subnet3 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["cde1"].id
     }
     cde-subnet4 = {
-      "0.0.0.0/0" = aws_nat_gateway.ngw["cde1"].id
+      "0.0.0.0/0" = aws_nat_gateway.ngw["cde2"].id
     }
     cde-subnet5 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["cde1"].id
     }
     cde-subnet6 = {
-      "0.0.0.0/0" = aws_nat_gateway.ngw["cde1"].id
+      "0.0.0.0/0" = aws_nat_gateway.ngw["cde2"].id
     }
     cde-subnet7 = {
       "0.0.0.0/0" = aws_nat_gateway.ngw["cde1"].id
     }
     cde-subnet8 = {
-      "0.0.0.0/0" = aws_nat_gateway.ngw["cde1"].id
+      "0.0.0.0/0" = aws_nat_gateway.ngw["cde2"].id
     }
     cde-dmz1 = { #10.101.101.0/24
       "0.0.0.0/0" = aws_internet_gateway.igw["cde"].id
