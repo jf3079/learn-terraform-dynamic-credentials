@@ -92,13 +92,13 @@ locals {
   }
   ngw = {
     "trans1" = aws_subnet.subnet["trns-protected1"].id
-    "trans2" = aws_subnet.subnet["trns-protected1"].id
-    "prod1"  = aws_subnet.subnet["prod-protected1"].id
-    "prod2"  = aws_subnet.subnet["prod-protected2"].id
-    "cde1"   = aws_subnet.subnet["cde-protected1"].id
-    "cde2"   = aws_subnet.subnet["cde-protected2"].id
-    "insp1"  = aws_subnet.subnet["insp-public1"].id
-    "insp2"  = aws_subnet.subnet["insp-public2"].id
+    # "trans2" = aws_subnet.subnet["trns-protected1"].id
+    "prod1" = aws_subnet.subnet["prod-protected1"].id
+    # "prod2"  = aws_subnet.subnet["prod-protected2"].id
+    "cde1" = aws_subnet.subnet["cde-protected1"].id
+    # "cde2"   = aws_subnet.subnet["cde-protected2"].id
+    # "insp1"  = aws_subnet.subnet["insp-public1"].id
+    #  "insp2"  = aws_subnet.subnet["insp-public2"].id
   }
   tgw_attach = {
     "insp" = {
