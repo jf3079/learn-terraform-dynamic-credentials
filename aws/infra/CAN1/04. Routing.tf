@@ -101,28 +101,28 @@ locals {
 
     }
     trns-subnet1 = {
-      "0.0.0.0/0" = aws_nat_gateway.ngw["Trans1"].id
+      "0.0.0.0/0" = aws_nat_gateway.ngw["trans1"].id
     }
     trns-subnet2 = {
-      "0.0.0.0/0" = aws_nat_gateway.ngw["Trans2"].id
+      "0.0.0.0/0" = aws_nat_gateway.ngw["trans2"].id
     }
     trns-subnet3 = {
-      "0.0.0.0/0" = aws_nat_gateway.ngw["Trans1"].id
+      "0.0.0.0/0" = aws_nat_gateway.ngw["trans1"].id
     }
     trns-subnet4 = {
-      "0.0.0.0/0" = aws_nat_gateway.ngw["Trans2"].id
+      "0.0.0.0/0" = aws_nat_gateway.ngw["trans2"].id
     }
     trns-subnet5 = {
-      "0.0.0.0/0" = aws_nat_gateway.ngw["Trans1"].id
+      "0.0.0.0/0" = aws_nat_gateway.ngw["trans1"].id
     }
     trns-subnet6 = {
-      "0.0.0.0/0" = aws_nat_gateway.ngw["Trans2"].id
+      "0.0.0.0/0" = aws_nat_gateway.ngw["trans2"].id
     }
     trns-subnet7 = {
-      "0.0.0.0/0" = aws_nat_gateway.ngw["Trans1"].id
+      "0.0.0.0/0" = aws_nat_gateway.ngw["trans1"].id
     }
     trns-subnet8 = {
-      "0.0.0.0/0" = aws_nat_gateway.ngw["Trans2"].id
+      "0.0.0.0/0" = aws_nat_gateway.ngw["trans2"].id
     }
     trns-dmz1 = { #10.101.101.0/24
       "0.0.0.0/0" = aws_internet_gateway.igw["trns"].id
