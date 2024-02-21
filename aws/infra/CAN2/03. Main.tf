@@ -27,66 +27,66 @@ locals {
       vpc_cidr = var.vpc_cidr_trns
       igw      = "true"
       subnets = {
-        "trns-tgweni1"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.0.0/24", az = var.az1 }
-        "trns-tgweni2"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.1.0/24", az = var.az2 }
-        "trns-fwep1"      = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.2.0/24", az = var.az1 }
-        "trns-fwep2"      = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.3.0/24", az = var.az2 }
-        "trns-subnet1"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.4.0/24", az = var.az1 }
-        "trns-subnet2"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.5.0/24", az = var.az2 }
-        "trns-subnet3"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.6.0/24", az = var.az1 }
-        "trns-subnet4"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.7.0/24", az = var.az2 }
-        "trns-subnet5"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.8.0/24", az = var.az1 }
-        "trns-subnet6"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.9.0/24", az = var.az2 }
-        "trns-subnet7"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.10.0/24", az = var.az1 }
-        "trns-subnet8"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.11.0/24", az = var.az2 }
-        "trns-dmz1"       = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.12.0/24", az = var.az1 }
-        "trns-dmz2"       = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.13.0/24", az = var.az2 }
-        "trns-protected1" = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.14.0/24", az = var.az1 }
-        "trns-protected2" = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.15.0/24", az = var.az2 }
+        "trns-subnet1"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.1.0/24", az = var.az1 }
+        "trns-subnet2"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.2.0/24", az = var.az2 }
+        "trns-subnet3"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.3.0/24", az = var.az1 }
+        "trns-subnet4"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.4.0/24", az = var.az2 }
+        "trns-subnet5"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.5.0/24", az = var.az1 }
+        "trns-subnet6"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.6.0/24", az = var.az2 }
+        "trns-subnet7"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.7.0/24", az = var.az1 }
+        "trns-subnet8"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.8.0/24", az = var.az2 }
+        "trns-dmz1"       = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.101.0/24", az = var.az1 }
+        "trns-dmz2"       = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.102.0/24", az = var.az2 }
+        "trns-protected1" = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.103.0/24", az = var.az1 }
+        "trns-protected2" = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.104.0/24", az = var.az2 }
+        "trns-tgweni1"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.105.0/24", az = var.az1 }
+        "trns-tgweni2"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.106.0/24", az = var.az2 }
+        "trns-fwep1"      = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.107.0/24", az = var.az1 }
+        "trns-fwep2"      = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_trns, 16, 0)), 0, 2))}.108.0/24", az = var.az2 }
       }
     }
     "prod" = {
       vpc_cidr = var.vpc_cidr_prod
       igw      = "true"
       subnets = {
-        "prod-tgweni1"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.0.0/24", az = var.az1 }
-        "prod-tgweni2"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.1.0/24", az = var.az2 }
-        "prod-fwep1"      = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.2.0/24", az = var.az1 }
-        "prod-fwep2"      = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.3.0/24", az = var.az2 }
-        "prod-subnet1"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.4.0/24", az = var.az1 }
-        "prod-subnet2"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.5.0/24", az = var.az2 }
-        "prod-subnet3"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.6.0/24", az = var.az1 }
-        "prod-subnet4"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.7.0/24", az = var.az2 }
-        "prod-subnet5"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.8.0/24", az = var.az1 }
-        "prod-subnet6"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.9.0/24", az = var.az2 }
-        "prod-subnet7"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.10.0/24", az = var.az1 }
-        "prod-subnet8"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.11.0/24", az = var.az2 }
-        "prod-dmz1"       = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.12.0/24", az = var.az1 }
-        "prod-dmz2"       = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.13.0/24", az = var.az2 }
-        "prod-protected1" = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.14.0/24", az = var.az1 }
-        "prod-protected2" = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.15.0/24", az = var.az2 }
+        "prod-subnet1"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.1.0/24", az = var.az1 }
+        "prod-subnet2"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.2.0/24", az = var.az2 }
+        "prod-subnet3"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.3.0/24", az = var.az1 }
+        "prod-subnet4"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.4.0/24", az = var.az2 }
+        "prod-subnet5"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.5.0/24", az = var.az1 }
+        "prod-subnet6"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.6.0/24", az = var.az2 }
+        "prod-subnet7"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.7.0/24", az = var.az1 }
+        "prod-subnet8"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.8.0/24", az = var.az2 }
+        "prod-dmz1"       = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.101.0/24", az = var.az1 }
+        "prod-dmz2"       = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.102.0/24", az = var.az2 }
+        "prod-protected1" = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.103.0/24", az = var.az1 }
+        "prod-protected2" = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.104.0/24", az = var.az2 }
+        "prod-tgweni1"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.105.0/24", az = var.az1 }
+        "prod-tgweni2"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.106.0/24", az = var.az2 }
+        "prod-fwep1"      = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.107.0/24", az = var.az1 }
+        "prod-fwep2"      = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_prod, 16, 0)), 0, 2))}.108.0/24", az = var.az2 }
       }
     }
     "cde" = {
       vpc_cidr = var.vpc_cidr_cde
       igw      = "true"
       subnets = {
-        "cde-tgweni1"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.0.0/24", az = var.az1 }
-        "cde-tgweni2"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.1.0/24", az = var.az2 }
-        "cde-fwep1"      = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.2.0/24", az = var.az1 }
-        "cde-fwep2"      = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.3.0/24", az = var.az2 }
-        "cde-subnet1"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.4.0/24", az = var.az1 }
-        "cde-subnet2"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.5.0/24", az = var.az2 }
-        "cde-subnet3"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.6.0/24", az = var.az1 }
-        "cde-subnet4"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.7.0/24", az = var.az2 }
-        "cde-subnet5"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.8.0/24", az = var.az1 }
-        "cde-subnet6"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.9.0/24", az = var.az2 }
-        "cde-subnet7"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.10.0/24", az = var.az1 }
-        "cde-subnet8"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.11.0/24", az = var.az2 }
-        "cde-dmz1"       = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.12.0/24", az = var.az1 }
-        "cde-dmz2"       = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.13.0/24", az = var.az2 }
-        "cde-protected1" = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.14.0/24", az = var.az1 }
-        "cde-protected2" = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.15.0/24", az = var.az2 }
+        "cde-subnet1"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.1.0/24", az = var.az1 }
+        "cde-subnet2"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.2.0/24", az = var.az2 }
+        "cde-subnet3"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.3.0/24", az = var.az1 }
+        "cde-subnet4"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.4.0/24", az = var.az2 }
+        "cde-subnet5"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.5.0/24", az = var.az1 }
+        "cde-subnet6"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.6.0/24", az = var.az2 }
+        "cde-subnet7"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.7.0/24", az = var.az1 }
+        "cde-subnet8"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.8.0/24", az = var.az2 }
+        "cde-dmz1"       = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.101.0/24", az = var.az1 }
+        "cde-dmz2"       = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.102.0/24", az = var.az2 }
+        "cde-protected1" = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.103.0/24", az = var.az1 }
+        "cde-protected2" = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.104.0/24", az = var.az2 }
+        "cde-tgweni1"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.105.0/24", az = var.az1 }
+        "cde-tgweni2"    = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.106.0/24", az = var.az2 }
+        "cde-fwep1"      = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.107.0/24", az = var.az1 }
+        "cde-fwep2"      = { cidr = "${join(".", slice(split(".", cidrsubnet(var.vpc_cidr_cde, 16, 0)), 0, 2))}.108.0/24", az = var.az2 }
       }
     }
   }
