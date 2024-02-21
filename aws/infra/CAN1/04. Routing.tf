@@ -88,18 +88,6 @@ locals {
     }
   }
   trns-routes = {
-    trns-tgweni1 = {
-
-    }
-    trns-tgweni2 = {
-
-    }
-    trns-fwep1 = {
-
-    }
-    trns-fwep2 = {
-
-    }
     trns-subnet1 = {
       "0.0.0.0/0"  = aws_nat_gateway.ngw["trans1"].id
       "10.0.0.0/8" = aws_ec2_transit_gateway.tgw.id
@@ -132,6 +120,18 @@ locals {
       "0.0.0.0/0"  = aws_nat_gateway.ngw["trans2"].id
       "10.0.0.0/8" = aws_ec2_transit_gateway.tgw.id
     }
+    trns-tgweni1 = {
+
+    }
+    trns-tgweni2 = {
+
+    }
+    trns-fwep1 = {
+
+    }
+    trns-fwep2 = {
+
+    }
     trns-dmz1 = { #10.101.101.0/24
       "0.0.0.0/0"  = aws_internet_gateway.igw["trns"].id
       "10.0.0.0/8" = aws_ec2_transit_gateway.tgw.id
@@ -159,18 +159,6 @@ locals {
     }
   }
   prod-routes = {
-    prod-tgweni1 = {
-
-    }
-    prod-tgweni2 = {
-
-    }
-    prod-fwep1 = {
-
-    }
-    prod-fwep2 = {
-
-    }
     prod-subnet1 = {
       "0.0.0.0/0"  = aws_nat_gateway.ngw["prod1"].id
       "10.0.0.0/8" = aws_ec2_transit_gateway.tgw.id
@@ -203,6 +191,18 @@ locals {
       "0.0.0.0/0"  = aws_nat_gateway.ngw["prod2"].id
       "10.0.0.0/8" = aws_ec2_transit_gateway.tgw.id
     }
+    prod-tgweni1 = {
+
+    }
+    prod-tgweni2 = {
+
+    }
+    prod-fwep1 = {
+
+    }
+    prod-fwep2 = {
+
+    }
     prod-dmz1 = { #10.101.101.0/24
       "0.0.0.0/0"  = aws_internet_gateway.igw["prod"].id
       "10.0.0.0/8" = aws_ec2_transit_gateway.tgw.id
@@ -230,18 +230,6 @@ locals {
     }
   }
   cde-routes = {
-    cde-tgweni1 = {
-
-    }
-    cde-tgweni2 = {
-
-    }
-    cde-fwep1 = {
-
-    }
-    cde-fwep2 = {
-
-    }
     cde-subnet1 = {
       "0.0.0.0/0"  = aws_nat_gateway.ngw["cde1"].id
       "10.0.0.0/8" = aws_ec2_transit_gateway.tgw.id
@@ -273,6 +261,18 @@ locals {
     cde-subnet8 = {
       "0.0.0.0/0"  = aws_nat_gateway.ngw["cde2"].id
       "10.0.0.0/8" = aws_ec2_transit_gateway.tgw.id
+    }
+    cde-tgweni1 = {
+
+    }
+    cde-tgweni2 = {
+
+    }
+    cde-fwep1 = {
+
+    }
+    cde-fwep2 = {
+
     }
     cde-dmz1 = { #10.101.101.0/24
       "0.0.0.0/0"  = aws_internet_gateway.igw["cde"].id
