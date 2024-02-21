@@ -22,13 +22,7 @@ variable "tfc_project_name" {
 }
 
 variable "tfc_workspace_name" {
-  type        = string
-  default     = "dynamic-credentials-trust-relationship"
-  description = "The name of the workspace that you'd like to create and connect to AWS"
-}
-
-variable "aws_region" {
-  type        = string
-  default     = "us-east-2"
-  description = "AWS region for all resources"
+  type        = list(any)
+  default     = ["my-aws-workspace"]
+  description = "The name list of the workspaces that you'd like to create and connect to AWS"
 }

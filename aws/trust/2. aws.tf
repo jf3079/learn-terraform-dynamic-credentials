@@ -2,7 +2,6 @@
 # SPDX-License-Identifier: MPL-2.0
 
 provider "aws" {
-  region = var.aws_region
 }
 
 data "tls_certificate" "tfc_certificate" {
@@ -16,7 +15,8 @@ resource "aws_iam_openid_connect_provider" "tfc_provider" {
 }
 
 resource "aws_iam_role" "tfc_role" {
-  name = "tfc-role"
+  for_each = toset(var.tfc_workspace_name)
+  name     = "tfc-role-${each.key}"
 
   assume_role_policy = <<EOF
 {
@@ -33,7 +33,7 @@ resource "aws_iam_role" "tfc_role" {
          "${var.tfc_hostname}:aud": "${one(aws_iam_openid_connect_provider.tfc_provider.client_id_list)}"
        },
        "StringLike": {
-         "${var.tfc_hostname}:sub": "organization:${var.tfc_organization_name}:project:${var.tfc_project_name}:workspace:${var.tfc_workspace_name}:run_phase:*"
+         "${var.tfc_hostname}:sub": "organization:${var.tfc_organization_name}:project:${var.tfc_project_name}:workspace:${each.key}:run_phase:*"
        }
      }
    }
@@ -48,21 +48,20 @@ resource "aws_iam_policy" "tfc_policy" {
 
   policy = <<EOF
 {
- "Version": "2012-10-17",
- "Statement": [
-   {
-     "Effect": "Allow",
-     "Action": [
-       "ec2:*"
-     ],
-     "Resource": "*"
-   }
- ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "*",
+            "Resource": "*"
+        }
+    ]
 }
 EOF
 }
 
 resource "aws_iam_role_policy_attachment" "tfc_policy_attachment" {
-  role       = aws_iam_role.tfc_role.name
+  for_each   = toset(var.tfc_workspace_name)
+  role       = aws_iam_role.tfc_role[each.key].name
   policy_arn = aws_iam_policy.tfc_policy.arn
 }
