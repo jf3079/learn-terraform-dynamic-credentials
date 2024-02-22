@@ -1,8 +1,0 @@
-site          = "CAN1"
-region        = "us-east-1"
-vpc_cidr_insp = "10.110.0.0/16"
-vpc_cidr_trns = "10.111.0.0/16"
-vpc_cidr_prod = "10.112.0.0/16"
-vpc_cidr_cde  = "10.113.0.0/16"
-az1           = "a"
-az2           = "b"
