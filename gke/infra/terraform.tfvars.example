@@ -1,2 +1,0 @@
-cluster-endpoint-url = "<URL-of-cluster-API>"
-cluster-endpoint-ca  = "<Base64-Encoded-CA>"
