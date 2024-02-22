@@ -10,6 +10,9 @@
 *.tfvars
 *.tfvars.*
 
+*.gitignore
+*.gitignore.*
+
 
 # Crash log files
 crash.log
