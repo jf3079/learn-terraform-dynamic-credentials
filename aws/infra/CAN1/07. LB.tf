@@ -1,5 +1,14 @@
 locals {
   nlb_int = {
+
+  }
+
+  nlb_ext = {
+
+  }
+}
+
+/*################VSample for Internal NLB ################
     "Test-cde" = {
       vpc             = "cde"
       target          = ["Test_cde01", "", "", ]
@@ -8,19 +17,17 @@ locals {
     }
     "Test-prod" = {
       vpc             = "prod"
-      target          = ["10.112.7.174", "", "", ]
+      target          = ["10.222.7.174", "", "", ]
       port            = ["80"]
       inbound_allowed = ["0.0.0.0/0", ]
     }
-  }
 
-  nlb_ext = {
+################VSample for External NLB ################
     "Test-prod-ext" = {
       vpc             = "prod"
-      target          = ["10.112.7.174", "", "", ]
+      target          = ["10.222.7.174", "", "", ]
       port            = ["80"]
       inbound_allowed = ["0.0.0.0/0", ]
       internal        = "false"
     }
-  }
-}
+*/
